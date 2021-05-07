@@ -16,19 +16,21 @@ See the examples directory for the input data files.
 </tr>
 
 <tr>
-    <td><pre>
-    ```bash
-    set out 'plot.ps'
-    plot 'data.txt' u 1:2
-    set out
-    </pre></td>
+  <td><pre>
 
-    <td><pre>
-    ```bash
-    set out 'plot.ps'
+    set terminal postscript
+    set out 'gnuplot.ps'
     plot 'data.txt' u 1:2
     set out
-    </pre></td>
+    
+  </pre></td>
+  <td><pre>
+
+    set out 'tecCmd.ps'
+    plot 'data.txt' u 1:2
+    set out
+   
+  </pre></td>
 </tr>
 
 
