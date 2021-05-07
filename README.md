@@ -45,7 +45,7 @@ See the examples directory for the input data files.
     <td><img src="examples/1/gnuplot.png"></td>
     <td><img src="examples/1/tecCmd.png"></td>
 </tr>
-
+</table>
 
 #### Example 2
 
@@ -82,6 +82,4 @@ See the examples directory for the input data files.
     <td><img src="examples/2/gnuplot.png"></td>
     <td><img src="examples/2/tecCmd.png"></td>
 </tr>
-
-
 </table>
