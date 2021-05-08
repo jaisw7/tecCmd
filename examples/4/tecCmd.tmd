@@ -1,0 +1,15 @@
+set out 'tecCmd.ps'
+set xrange [-1:1]
+set yrange [-1:1]
+keyword x=linspace(-1,1)
+keyword "def P0(x): return (x+1-x)"
+keyword "def P1(x): return x"
+keyword "def P2(x): return 0.5*(3*x**2-1)"
+keyword "def P3(x): return (35*x**4-30*x**2+3)/8."
+keyword "def P4(x): return (63*x**5-70*x**3+15*x)/8."
+plot function("(x): return vstack((x, P0(x))).T") u 1:2 w l lc 'red' t 'P0', \
+     function("(x): return vstack((x, P1(x))).T") u 1:2 w l lc 'green' t 'P1', \
+     function("(x): return vstack((x, P2(x))).T") u 1:2 w l lc 'blue' t 'P2', \
+     function("(x): return vstack((x, P3(x))).T") u 1:2 w l lc 'orange' t 'P3', \
+     function("(x): return vstack((x, P4(x))).T") u 1:2 w l lc 'magenta' t 'P4'
+set out
