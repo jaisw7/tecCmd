@@ -15,6 +15,7 @@ It gets the job done. I wrote it on a Friday evening.
 See the examples directory for the input data files.
 
 #### Example 1
+Reading matrix from data.txt and plotting column 1 on x-axis and column 2 on y-axis.
 
 <table>
 <tr>
@@ -48,6 +49,7 @@ See the examples directory for the input data files.
 </table>
 
 #### Example 2
+Using functions to transform the input matrix columns. In this example, I am reading matrix from data.txt, plotting column 1 on x-axis, and *sin(pi*$1)* on the y-axis. The syntax convention is close to gnuplot. Functions defined in numpy are available in global namespace and can be evaluated.
 
 <table>
 <tr>
@@ -72,6 +74,47 @@ See the examples directory for the input data files.
     set xrange [0:3.14]
     set yrange [-1:1]
     plot 'data.txt' u 1:(sin(pi*$1)) w l
+    set out
+   
+  </pre></td>
+</tr>
+
+
+<tr>
+    <td><img src="examples/2/gnuplot.png"></td>
+    <td><img src="examples/2/tecCmd.png"></td>
+</tr>
+</table>
+
+
+
+#### Example 3
+Using user defined functions to transform the input matrix columns. 
+
+<table>
+<tr>
+    <th> gnuplot </th>
+    <th> tecCmd </th>
+</tr>
+
+<tr>
+  <td><pre>
+
+    set terminal postscript
+    set out 'gnuplot.ps'
+    set xrange [0:3.14]
+    set yrange [-1:1]
+    f(x) = sin(pi*x)
+    plot f(x) w l
+    set out
+    
+  </pre></td>
+  <td><pre>
+
+    set out 'tecCmd.ps'
+    set xrange [0:3.14]
+    set yrange [-1:1]
+    plot function("(x): return vstack((x, sin(pi*x))).T") u 1:2 w l
     set out
    
   </pre></td>

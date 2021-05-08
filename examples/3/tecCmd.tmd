@@ -1,0 +1,5 @@
+set out 'tecCmd.ps'
+set xrange [0:3.14]
+set yrange [-1:1]
+plot function("(x): return vstack((x, sin(pi*x))).T") u 1:2 w l
+set out
