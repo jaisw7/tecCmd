@@ -2,11 +2,11 @@ set out 'tecCmd.ps'
 set xrange [-1:1]
 set yrange [-1:1]
 keyword x=linspace(-1,1)
-keyword "def P0(x): return (x+1-x)"
-keyword "def P1(x): return x"
-keyword "def P2(x): return 0.5*(3*x**2-1)"
-keyword "def P3(x): return (35*x**4-30*x**2+3)/8."
-keyword "def P4(x): return (63*x**5-70*x**3+15*x)/8."
+keyword P0=lambda x: (x+1-x)
+keyword P1=lambda x: x
+keyword P2=lambda x: 0.5*(3*x**2-1)
+keyword P3=lambda x: (35*x**4-30*x**2+3)/8.
+keyword P4=lambda x: (63*x**5-70*x**3+15*x)/8.
 plot function("(x): return vstack((x, P0(x))).T") u 1:2 w l lc 'red' t 'P0', \
      function("(x): return vstack((x, P1(x))).T") u 1:2 w l lc 'green' t 'P1', \
      function("(x): return vstack((x, P2(x))).T") u 1:2 w l lc 'blue' t 'P2', \
