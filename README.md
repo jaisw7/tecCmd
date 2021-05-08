@@ -89,7 +89,7 @@ Using functions to transform the input matrix columns. In this example, I am rea
 
 
 #### Example 3
-Using user defined functions to transform the input matrix columns. 
+Using user defined functions to transform the input matrix columns. Everything that appears after _keyword_ is passed to _exec_
 
 <table>
 <tr>
@@ -114,7 +114,8 @@ Using user defined functions to transform the input matrix columns.
     set out 'tecCmd.ps'
     set xrange [0:3.14]
     set yrange [-1:1]
-    plot function("(x): return vstack((x, sin(pi*x))).T") u 1:2 w l
+    keyword f=lambda x: sin(pi*x)
+    plot function("(x): return vstack((x, f(x))).T") u 1:2 w l
     set out
    
   </pre></td>
