@@ -1,4 +1,4 @@
-set terminal postscript
+set terminal postscript color
 set out 'gnuplot.ps'
 set xrange [0:3.14]
 set yrange [-1:1]

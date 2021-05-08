@@ -26,7 +26,7 @@ Reading matrix from data.txt and plotting column 1 on x-axis and column 2 on y-a
 <tr>
   <td><pre>
 
-    set terminal postscript
+    set terminal postscript color
     set out 'gnuplot.ps'
     plot 'data.txt' u 1:2
     set out
@@ -60,7 +60,7 @@ Using functions to transform the input matrix columns. In this example, I am rea
 <tr>
   <td><pre>
 
-    set terminal postscript
+    set terminal postscript color
     set out 'gnuplot.ps'
     set xrange [0:3.14]
     set yrange [-1:1]
@@ -100,7 +100,7 @@ Using user defined functions to transform the input matrix columns.
 <tr>
   <td><pre>
 
-    set terminal postscript
+    set terminal postscript color
     set out 'gnuplot.ps'
     set xrange [0:3.14]
     set yrange [-1:1]
@@ -181,7 +181,7 @@ Plot multiple lines: [Legendre Polynomials](https://en.wikipedia.org/wiki/Legend
 
 
 <tr>
-    <td><img src="examples/3/gnuplot.png"></td>
-    <td><img src="examples/3/tecCmd.png"></td>
+    <td><img src="examples/4/gnuplot.png"></td>
+    <td><img src="examples/4/tecCmd.png"></td>
 </tr>
 </table>
