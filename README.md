@@ -131,7 +131,7 @@ Using user defined functions to transform the input matrix columns. Everything t
 
 
 #### Example 4
-Plot multiple lines: [Legendre Polynomials](https://en.wikipedia.org/wiki/Legendre_polynomials). Everything that appears after _keyword_ is passed to _exec_.
+Plot multiple lines: [Legendre Polynomials](https://en.wikipedia.org/wiki/Legendre_polynomials). 
 
 <table>
 <tr>
