@@ -122,7 +122,7 @@ Using user defined functions to transform the input matrix columns.
 
 
 <tr>
-    <td><img src="examples/2/gnuplot.png"></td>
-    <td><img src="examples/2/tecCmd.png"></td>
+    <td><img src="examples/3/gnuplot.png"></td>
+    <td><img src="examples/3/tecCmd.png"></td>
 </tr>
 </table>
