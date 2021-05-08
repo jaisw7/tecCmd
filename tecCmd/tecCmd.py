@@ -1124,13 +1124,13 @@ class tecInterpreter:
                 pipes.append(len(bashCommand))
             fileData=''         
             try:
-              #fileData=subprocess.check_output(bashCommand)
-              fileData = commands.getoutput(" ".join(bashCommand))
+              #fileData = commands.getoutput(" ".join(bashCommand))
+              fileData = subprocess.check_output(" ".join(bashCommand), 
+                shell=True, encoding='UTF-8')
             except:
                 print( "Error executing system command:", bashCommand)
-            np.savetxt('/tmp/temp_'+str(os.getpid())+'.txt', 
-                [fileData], fmt="%s")
             fileName = '/tmp/temp_'+str(os.getpid())+'.txt'
+            np.savetxt(fileName,     [fileData], fmt="%s")
           except:
             print( "error parsing function command")
         elif(fileName.startswith("function(")):

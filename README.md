@@ -185,3 +185,54 @@ Plot multiple lines: [Legendre Polynomials](https://en.wikipedia.org/wiki/Legend
     <td><img src="examples/4/tecCmd.png"></td>
 </tr>
 </table>
+
+
+
+#### Example 5
+Sometimes we have log files. Bash utilities are useful for analyzing log files. This example shows how to execute bash command, and utilize the output to plot data.
+
+<table>
+<tr>
+    <th> gnuplot </th>
+    <th> tecCmd </th>
+</tr>
+
+<tr>
+  <td><pre>
+
+    set terminal postscript color enhanced
+    set out 'gnuplot.ps'
+    set datafile separator ","
+    set logscale y
+    set xlabel 'Non-dimensional time: t/t_0'
+    set ylabel 'Residual: |f^{n+1} - f^{n}|/|f^{n}|'
+    set key at 85,85
+    set yrange [1e-9:1e-3]
+    set xrange [0:6]
+    set xtics 0,1,6
+    plot "<grep 'dgfsresidualstd' data.txt | cut -d ':' -f2-" u 1:2 w l lc 'red'
+    set out
+    
+  </pre></td>
+  <td><pre>
+
+    set out 'tecCmd.ps'
+    set datafile separator ","
+    set logscale y
+    set xlabel 'Non-dimensional time: t/t<sub>0</sub>'
+    set ylabel 'Residual: |f<sup>n+1</sup> - f<sup>n</sup>|/|f<sup>n</sup>|'
+    set yrange [1e-9:1e-3]
+    set xrange [0:6]
+    set xticks spacing 1
+    plot system("grep 'dgfsresidualstd' data.txt | cut -d ':' -f2-") u 1:2 w l lw 0.3 lc 'red'
+    set out
+   
+  </pre></td>
+</tr>
+
+
+<tr>
+    <td><img src="examples/5/gnuplot.png"></td>
+    <td><img src="examples/5/tecCmd.png"></td>
+</tr>
+</table>

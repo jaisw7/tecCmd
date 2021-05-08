@@ -1,0 +1,10 @@
+set out 'tecCmd.ps'
+set datafile separator ","
+set logscale y
+set xlabel 'Non-dimensional time: t/t<sub>0</sub>'
+set ylabel 'Residual: |f<sup>n+1</sup> - f<sup>n</sup>|/|f<sup>n</sup>|'
+set yrange [1e-9:1e-3]
+set xrange [0:6]
+set xticks spacing 1
+plot system("grep 'dgfsresidualstd' data.txt | cut -d ':' -f2-") u 1:2 w l lw 0.3 lc 'red'
+set out
