@@ -190,7 +190,7 @@ Plot multiple lines: [Legendre Polynomials](https://en.wikipedia.org/wiki/Legend
 
 
 #### Example 5
-Sometimes we have log files. Bash utilities are useful for analyzing log files. This example shows how to execute bash command, and utilize the output to plot data.
+Sometimes we have log files. Bash utilities are useful for analyzing log files. This example shows how to execute bash command, and utilize the output to plot data. 
 
 <table>
 <tr>
@@ -237,3 +237,4 @@ Sometimes we have log files. Bash utilities are useful for analyzing log files. 
     <td><img src="examples/5/tecCmd.png"></td>
 </tr>
 </table>
+See example 6 which modifies gnuplot script to mimick the tecCmd output.
