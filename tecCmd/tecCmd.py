@@ -1359,6 +1359,7 @@ def __main__():
   manager = setupEnv();
   if(len(sys.argv)>1):
     if(os.path.exists(sys.argv[1])):
+      tecEnv = tecInterpreter()
       tecEnv.runScript(sys.argv[1])
     else:
       print( "Usage: tecCmd scriptFile")
