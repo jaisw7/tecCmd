@@ -18,7 +18,7 @@ vsrch = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", vfile, re.M)
 if vsrch:
     version = vsrch.group(1)
 else:
-    print('Unable to find a version string in dgfs1D/_version.py')
+    print('Unable to find a version string in tecCmd/_version.py')
 
 # Modules
 modules = [
@@ -65,7 +65,7 @@ setup(name='tecCmd',
       url='http://www.github.com/jaisw7',
       license='GNU GPL v2',
       keywords='Applied Mathematics',
-      packages=['dgfs1D'] + modules,
+      packages=['tecCmd'] + modules,
       package_data=package_data,
       entry_points={'console_scripts': console_scripts},
       install_requires=install_requires,
