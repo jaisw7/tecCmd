@@ -12,7 +12,7 @@ if sys.version_info[:2] < (3, 3):
     sys.exit(-1)
 
 # DGFS version
-vfile = open('dgfs1D/_version.py').read()
+vfile = open('tecCmd/_version.py').read()
 vsrch = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", vfile, re.M)
 
 if vsrch:
